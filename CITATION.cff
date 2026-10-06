@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the article below."
+title: "Exploiting departure-dependent setup structure in parallel batch scheduling: code and results"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/mzkoc/dyeing-departure-setup"
+authors:
+  - family-names: "Koç"
+    given-names: "Muhammed Zahid"
+    affiliation: "Karabük University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Sel"
+    given-names: "Çağrı"
+    affiliation: "Karabük University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Dolmacı"
+    given-names: "Muammer"
+    affiliation: "Karabük University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+keywords:
+  - parallel batch scheduling
+  - sequence-dependent setup times
+  - bi-objective optimisation
+  - matheuristic
+  - textile dyeing
+preferred-citation:
+  type: article
+  title: "Exploiting departure-dependent setup structure in parallel batch scheduling: a bi-objective matheuristic for water-efficient dyeing operations"
+  authors:
+    - family-names: "Koç"
+      given-names: "Muhammed Zahid"
+    - family-names: "Sel"
+      given-names: "Çağrı"
+    - family-names: "Dolmacı"
+      given-names: "Muammer"
+  year: 2026
+  notes: "Manuscript submitted for publication"

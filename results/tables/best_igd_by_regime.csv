@@ -1,0 +1,16 @@
+scale,regime,sum,count
+large,e<0,30,30
+large,e=0,30,30
+large,e>0,30,30
+medium,e<0,26,30
+medium,e=0,30,30
+medium,e>0,27,30
+small,e<0,16,30
+small,e=0,23,30
+small,e>0,14,30
+verify,e<0,66,90
+verify,e=0,56,90
+verify,e>0,45,90
+xlarge,e<0,29,30
+xlarge,e=0,30,30
+xlarge,e>0,26,30

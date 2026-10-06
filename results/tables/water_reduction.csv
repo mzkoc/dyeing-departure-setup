@@ -1,0 +1,6 @@
+,reduction_vs_CPM-blind_pct,reduction_vs_NSGA-II_pct,reduction_vs_ALNS_pct,reduction_vs_LPT+EDD_pct
+verify,0.0,3.2,3.6,91.2
+small,0.0,8.7,15.0,91.6
+medium,0.0,23.9,37.3,96.5
+large,0.0,43.1,32.7,96.8
+xlarge,0.0,58.7,58.7,97.6

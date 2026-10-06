@@ -1,0 +1,447 @@
+
+=== Table 6 - main comparison ===
+                         HV       IGD    HVn  IGDplus     Z1min   Z2min  water_m3  Z2opt_pct   front    cpu_s      evals
+verify CPM           46.064     6.315  0.962    0.062    47.907   0.083     1.067    100.000   2.278    0.109    199.781
+       CPM-blind     42.357     9.088  0.829    0.174    50.287   0.083     1.067    100.000   2.230    0.087    160.041
+       NSGA-II       45.091     3.625  0.929    0.097    47.552   0.086     1.102     98.148   2.941    2.618  10000.000
+       ALNS          45.119     3.232  0.930    0.096    47.505   0.086     1.106     98.519   3.067    1.922  10000.000
+       LPT+EDD       11.921    71.874  0.153    0.825    56.210   0.947    12.125     11.481   1.730    0.000      3.000
+small  CPM          301.144     8.344  1.092    0.017   107.988   0.194     2.489    100.000   3.600    6.131   1584.700
+       CPM-blind    272.282    16.809  0.929    0.140   116.995   0.194     2.489    100.000   3.611    4.507   1157.556
+       NSGA-II      284.110    13.172  1.002    0.092   112.850   0.213     2.726     90.000   5.133    3.513  10000.000
+       ALNS         286.461    11.613  1.013    0.085   112.013   0.229     2.927     85.556   5.756    5.026  10000.000
+       LPT+EDD       57.378   180.425  0.119    0.884   138.121   2.307    29.524      0.000   1.711    0.001      3.000
+medium CPM         3075.406     6.132  1.167    0.003   256.997   0.194     2.489    100.000   5.300  135.404   5484.544
+       CPM-blind   2800.948    34.358  1.018    0.096   290.014   0.194     2.489    100.000   5.156   94.169   3320.356
+       NSGA-II     2778.287    44.367  1.009    0.100   294.130   0.256     3.271     71.111   5.900    4.627  10000.000
+       ALNS        2822.557    44.480  1.035    0.085   287.061   0.310     3.970     62.222   7.456   14.737  10000.000
+       LPT+EDD      673.964   522.418  0.157    0.894   385.987   5.591    71.561      0.000   1.944    0.002      3.000
+large  CPM        14183.152     5.897  1.192    0.001   622.529   0.333     4.267    100.000   6.611  301.271   7120.344
+       CPM-blind  12920.293    64.102  1.054    0.083   695.438   0.333     4.267    100.000   6.411  260.696   5247.100
+       NSGA-II    12101.221   116.446  0.970    0.133   735.594   0.586     7.502     44.444   6.289    6.280  10000.000
+       ALNS       12913.621    86.194  1.054    0.083   691.209   0.495     6.341     60.000  10.200   44.746  10000.000
+       LPT+EDD     2714.152  1121.918  0.150    0.944   970.443  10.474   134.069      0.000   2.122    0.002      3.000
+xlarge CPM        49308.017    14.270  1.195    0.001  1209.970   0.500     6.400    100.000   7.300  280.989   7570.022
+       CPM-blind  46674.800    79.555  1.094    0.051  1292.998   0.500     6.400    100.000   7.489  294.498   6505.233
+       NSGA-II    41342.180   217.620  0.959    0.129  1433.182   1.211    15.502     15.556   7.211    6.179  10000.000
+       ALNS       45558.888   151.577  1.079    0.065  1296.983   1.209    15.478      7.778  13.522   76.240  10000.000
+       LPT+EDD     7778.440  2188.666  0.127    0.970  1837.754  20.587   263.513      0.000   2.022    0.002      3.000
+
+=== By colour-excess regime ===
+                            Z1min   Z2min  Z2opt_pct   front    cpu_s      evals
+scale  regime method                                                            
+large  e<0    ALNS        447.356   0.072     83.333  10.567   29.861  10000.000
+              CPM         400.026   0.000    100.000   6.067  153.941   9666.667
+              CPM-blind   446.513   0.000    100.000   6.733  145.765   8311.333
+              LPT+EDD     601.339  13.745      0.000   1.567    0.002      3.000
+              NSGA-II     473.849   0.025     90.000   5.500    7.105  10000.000
+       e=0    ALNS        590.746   0.350     20.000   9.867   32.021  10000.000
+              CPM         535.405   0.000    100.000   6.900  337.566   8575.033
+              CPM-blind   590.376   0.000    100.000   7.033  375.160   5671.933
+              LPT+EDD     820.230  11.208      0.000   2.567    0.002      3.000
+              NSGA-II     622.026   0.217     30.000   6.967    6.034  10000.000
+       e>0    ALNS       1035.525   1.064     76.667  10.167   72.356  10000.000
+              CPM         932.157   1.000    100.000   6.867  412.306   3119.333
+              CPM-blind  1049.423   1.000    100.000   5.467  261.162   1758.033
+              LPT+EDD    1489.759   6.470      0.000   2.233    0.002      3.000
+              NSGA-II    1110.906   1.517     13.333   6.400    5.700  10000.000
+medium e<0    ALNS        219.247   0.083     70.000   8.200   11.795  10000.000
+              CPM         198.352   0.000    100.000   5.467  201.587   8569.367
+              CPM-blind   220.056   0.000    100.000   5.467  159.759   5544.167
+              LPT+EDD     282.609   6.567      0.000   1.500    0.002      3.000
+              NSGA-II     223.185   0.025     90.000   6.467    5.046  10000.000
+       e=0    ALNS        259.635   0.217     33.333   7.433   13.739  10000.000
+              CPM         234.432   0.000    100.000   6.000  163.190   6009.833
+              CPM-blind   261.219   0.000    100.000   5.800  101.080   3486.833
+              LPT+EDD     350.137   5.869      0.000   2.200    0.002      3.000
+              NSGA-II     266.608   0.108     56.667   5.767    4.802  10000.000
+       e>0    ALNS        382.300   0.631     83.333   6.733   18.676  10000.000
+              CPM         338.208   0.583    100.000   4.433   41.437   1874.433
+              CPM-blind   388.767   0.583    100.000   4.200   21.668    930.067
+              LPT+EDD     525.217   4.336      0.000   2.133    0.001      3.000
+              NSGA-II     392.595   0.633     66.667   5.467    4.034  10000.000
+small  e<0    ALNS         84.243   0.000    100.000   5.800    4.459  10000.000
+              CPM          80.798   0.000    100.000   3.900   12.796   3380.067
+              CPM-blind    85.747   0.000    100.000   3.933    9.589   2537.167
+              LPT+EDD     101.713   2.456      0.000   1.233    0.001      3.000
+              NSGA-II      84.538   0.000    100.000   5.500    3.772  10000.000
+       e=0    ALNS        100.531   0.100     60.000   6.333    4.934  10000.000
+              CPM          94.072   0.000    100.000   4.500    5.355   1239.633
+              CPM-blind   102.384   0.000    100.000   4.500    3.756    843.133
+              LPT+EDD     123.144   2.625      0.000   1.867    0.001      3.000
+              NSGA-II     101.241   0.042     83.333   5.633    3.635  10000.000
+       e>0    ALNS        151.267   0.586     96.667   5.133    5.685  10000.000
+              CPM         149.093   0.583    100.000   2.400    0.241    134.400
+              CPM-blind   162.854   0.583    100.000   2.400    0.175     92.367
+              LPT+EDD     189.506   1.839      0.000   2.033    0.001      3.000
+              NSGA-II     152.771   0.597     86.667   4.267    3.132  10000.000
+verify e<0    ALNS         39.591   0.000    100.000   2.911    1.756  10000.000
+              CPM          38.972   0.000    100.000   2.478    0.199    354.067
+              CPM-blind    40.759   0.000    100.000   2.378    0.160    288.489
+              LPT+EDD      45.802   1.029      1.111   1.567    0.000      3.000
+              NSGA-II      39.614   0.003     98.889   2.833    2.630  10000.000
+       e=0    ALNS         44.090   0.008     96.667   3.233    2.126  10000.000
+              CPM          43.103   0.000    100.000   2.478    0.108    188.789
+              CPM-blind    45.559   0.000    100.000   2.478    0.086    147.978
+              LPT+EDD      51.800   1.011      0.000   1.711    0.000      3.000
+              NSGA-II      44.186   0.003     98.889   3.122    2.922  10000.000
+       e>0    ALNS         58.834   0.251     98.889   3.056    1.886  10000.000
+              CPM          61.646   0.250    100.000   1.878    0.020     56.489
+              CPM-blind    64.543   0.250    100.000   1.833    0.015     43.656
+              LPT+EDD      71.027   0.802     33.333   1.911    0.001      3.000
+              NSGA-II      58.855   0.253     96.667   2.867    2.303  10000.000
+xlarge e<0    ALNS        829.155   0.503      6.667  15.000   20.313  10000.000
+              CPM         755.382   0.000    100.000   5.100   23.959   9900.000
+              CPM-blind   860.312   0.000    100.000   5.067   19.412   8266.667
+              LPT+EDD    1147.667  25.005      0.000   1.433    0.001      3.000
+              NSGA-II     914.168   0.161     43.333   7.500    3.428  10000.000
+       e=0    ALNS       1062.376   1.114      0.000  12.600   58.006  10000.000
+              CPM         930.213   0.000    100.000   8.967  227.423   9533.400
+              CPM-blind  1045.495   0.000    100.000   9.733  214.600   8343.700
+              LPT+EDD    1497.863  23.136      0.000   2.500    0.002      3.000
+              NSGA-II    1177.089   0.428      0.000   8.067    7.386  10000.000
+       e>0    ALNS       1999.419   2.011     16.667  12.967  150.402  10000.000
+              CPM        1944.317   1.500    100.000   7.833  591.584   3276.667
+              CPM-blind  1973.189   1.500    100.000   7.667  649.480   2905.333
+              LPT+EDD    2867.732  13.619      0.000   2.133    0.002      3.000
+              NSGA-II    2208.291   3.044      3.333   6.067    7.722  10000.000
+
+=== Friedman / Nemenyi on igd ===
+    scale    N         p      CD  rank_CPM  rank_CPM-blind  rank_NSGA-II  rank_ALNS  rank_LPT+EDD  cpm_best
+0  verify  270  8.9e-145  0.3712    2.0574          3.3185        2.4278     2.3278        4.8685       167
+1   small   90   9.0e-50  0.6430    1.8611          3.3778        2.6000     2.1611        5.0000        53
+2  medium   90   4.1e-60  0.6430    1.1000          2.7833        3.3778     2.7389        5.0000        83
+3   large   90   1.8e-69  0.6430    1.0389          2.3722        3.8556     2.7333        5.0000        90
+4  xlarge   90   2.2e-67  0.6430    1.2056          2.0500        3.7444     3.0000        5.0000        85
+
+=== Nemenyi pairs on igd (significant only) ===
+     scale          a          b  rank_diff  significant
+0   verify        CPM  CPM-blind      1.261         True
+3   verify        CPM    LPT+EDD      2.811         True
+4   verify  CPM-blind    NSGA-II      0.891         True
+5   verify  CPM-blind       ALNS      0.991         True
+6   verify  CPM-blind    LPT+EDD      1.550         True
+8   verify    NSGA-II    LPT+EDD      2.441         True
+9   verify       ALNS    LPT+EDD      2.541         True
+10   small        CPM  CPM-blind      1.517         True
+11   small        CPM    NSGA-II      0.739         True
+13   small        CPM    LPT+EDD      3.139         True
+14   small  CPM-blind    NSGA-II      0.778         True
+15   small  CPM-blind       ALNS      1.217         True
+16   small  CPM-blind    LPT+EDD      1.622         True
+18   small    NSGA-II    LPT+EDD      2.400         True
+19   small       ALNS    LPT+EDD      2.839         True
+20  medium        CPM  CPM-blind      1.683         True
+21  medium        CPM    NSGA-II      2.278         True
+22  medium        CPM       ALNS      1.639         True
+23  medium        CPM    LPT+EDD      3.900         True
+26  medium  CPM-blind    LPT+EDD      2.217         True
+28  medium    NSGA-II    LPT+EDD      1.622         True
+29  medium       ALNS    LPT+EDD      2.261         True
+30   large        CPM  CPM-blind      1.333         True
+31   large        CPM    NSGA-II      2.817         True
+32   large        CPM       ALNS      1.694         True
+33   large        CPM    LPT+EDD      3.961         True
+34   large  CPM-blind    NSGA-II      1.483         True
+36   large  CPM-blind    LPT+EDD      2.628         True
+37   large    NSGA-II       ALNS      1.122         True
+38   large    NSGA-II    LPT+EDD      1.144         True
+39   large       ALNS    LPT+EDD      2.267         True
+40  xlarge        CPM  CPM-blind      0.844         True
+41  xlarge        CPM    NSGA-II      2.539         True
+42  xlarge        CPM       ALNS      1.794         True
+43  xlarge        CPM    LPT+EDD      3.794         True
+44  xlarge  CPM-blind    NSGA-II      1.694         True
+45  xlarge  CPM-blind       ALNS      0.950         True
+46  xlarge  CPM-blind    LPT+EDD      2.950         True
+47  xlarge    NSGA-II       ALNS      0.744         True
+48  xlarge    NSGA-II    LPT+EDD      1.256         True
+49  xlarge       ALNS    LPT+EDD      2.000         True
+
+=== Friedman / Nemenyi on igd_plus ===
+    scale    N         p      CD  rank_CPM  rank_CPM-blind  rank_NSGA-II  rank_ALNS  rank_LPT+EDD  cpm_best
+0  verify  270  3.7e-152  0.3712    1.9796          3.4074        2.3981     2.3370        4.8778       179
+1   small   90   4.3e-57  0.6430    1.5167          3.5500        2.6944     2.2389        5.0000        68
+2  medium   90   7.0e-64  0.6430    1.0444          3.1333        3.4111     2.4111        5.0000        88
+3   large   90   9.2e-71  0.6430    1.0500          2.4056        3.9444     2.6000        5.0000        89
+4  xlarge   90   4.4e-71  0.6430    1.1722          2.0611        3.9444     2.8222        5.0000        88
+
+=== Nemenyi pairs on igd_plus (significant only) ===
+     scale          a          b  rank_diff  significant
+0   verify        CPM  CPM-blind      1.428         True
+1   verify        CPM    NSGA-II      0.419         True
+3   verify        CPM    LPT+EDD      2.898         True
+4   verify  CPM-blind    NSGA-II      1.009         True
+5   verify  CPM-blind       ALNS      1.070         True
+6   verify  CPM-blind    LPT+EDD      1.470         True
+8   verify    NSGA-II    LPT+EDD      2.480         True
+9   verify       ALNS    LPT+EDD      2.541         True
+10   small        CPM  CPM-blind      2.033         True
+11   small        CPM    NSGA-II      1.178         True
+12   small        CPM       ALNS      0.722         True
+13   small        CPM    LPT+EDD      3.483         True
+14   small  CPM-blind    NSGA-II      0.856         True
+15   small  CPM-blind       ALNS      1.311         True
+16   small  CPM-blind    LPT+EDD      1.450         True
+18   small    NSGA-II    LPT+EDD      2.306         True
+19   small       ALNS    LPT+EDD      2.761         True
+20  medium        CPM  CPM-blind      2.089         True
+21  medium        CPM    NSGA-II      2.367         True
+22  medium        CPM       ALNS      1.367         True
+23  medium        CPM    LPT+EDD      3.956         True
+25  medium  CPM-blind       ALNS      0.722         True
+26  medium  CPM-blind    LPT+EDD      1.867         True
+27  medium    NSGA-II       ALNS      1.000         True
+28  medium    NSGA-II    LPT+EDD      1.589         True
+29  medium       ALNS    LPT+EDD      2.589         True
+30   large        CPM  CPM-blind      1.356         True
+31   large        CPM    NSGA-II      2.894         True
+32   large        CPM       ALNS      1.550         True
+33   large        CPM    LPT+EDD      3.950         True
+34   large  CPM-blind    NSGA-II      1.539         True
+36   large  CPM-blind    LPT+EDD      2.594         True
+37   large    NSGA-II       ALNS      1.344         True
+38   large    NSGA-II    LPT+EDD      1.056         True
+39   large       ALNS    LPT+EDD      2.400         True
+40  xlarge        CPM  CPM-blind      0.889         True
+41  xlarge        CPM    NSGA-II      2.772         True
+42  xlarge        CPM       ALNS      1.650         True
+43  xlarge        CPM    LPT+EDD      3.828         True
+44  xlarge  CPM-blind    NSGA-II      1.883         True
+45  xlarge  CPM-blind       ALNS      0.761         True
+46  xlarge  CPM-blind    LPT+EDD      2.939         True
+47  xlarge    NSGA-II       ALNS      1.122         True
+48  xlarge    NSGA-II    LPT+EDD      1.056         True
+49  xlarge       ALNS    LPT+EDD      2.178         True
+
+=== Friedman / Nemenyi on hv_norm ===
+    scale    N         p      CD  rank_CPM  rank_CPM-blind  rank_NSGA-II  rank_ALNS  rank_LPT+EDD  cpm_best
+0  verify  270  1.5e-155  0.3712    1.9870          3.4981        2.3667     2.2630        4.8852       177
+1   small   90   1.6e-57  0.6430    1.5611          3.6389        2.6778     2.1222        5.0000        65
+2  medium   90   1.4e-63  0.6430    1.0667          3.0667        3.4667     2.4000        5.0000        87
+3   large   90   2.9e-71  0.6430    1.0500          2.3944        3.9667     2.5889        5.0000        89
+4  xlarge   90   6.2e-71  0.6430    1.1722          2.1611        3.9889     2.6778        5.0000        88
+
+=== Nemenyi pairs on hv_norm (significant only) ===
+     scale          a          b  rank_diff  significant
+0   verify        CPM  CPM-blind      1.511         True
+1   verify        CPM    NSGA-II      0.380         True
+3   verify        CPM    LPT+EDD      2.898         True
+4   verify  CPM-blind    NSGA-II      1.131         True
+5   verify  CPM-blind       ALNS      1.235         True
+6   verify  CPM-blind    LPT+EDD      1.387         True
+8   verify    NSGA-II    LPT+EDD      2.519         True
+9   verify       ALNS    LPT+EDD      2.622         True
+10   small        CPM  CPM-blind      2.078         True
+11   small        CPM    NSGA-II      1.117         True
+13   small        CPM    LPT+EDD      3.439         True
+14   small  CPM-blind    NSGA-II      0.961         True
+15   small  CPM-blind       ALNS      1.517         True
+16   small  CPM-blind    LPT+EDD      1.361         True
+18   small    NSGA-II    LPT+EDD      2.322         True
+19   small       ALNS    LPT+EDD      2.878         True
+20  medium        CPM  CPM-blind      2.000         True
+21  medium        CPM    NSGA-II      2.400         True
+22  medium        CPM       ALNS      1.333         True
+23  medium        CPM    LPT+EDD      3.933         True
+25  medium  CPM-blind       ALNS      0.667         True
+26  medium  CPM-blind    LPT+EDD      1.933         True
+27  medium    NSGA-II       ALNS      1.067         True
+28  medium    NSGA-II    LPT+EDD      1.533         True
+29  medium       ALNS    LPT+EDD      2.600         True
+30   large        CPM  CPM-blind      1.344         True
+31   large        CPM    NSGA-II      2.917         True
+32   large        CPM       ALNS      1.539         True
+33   large        CPM    LPT+EDD      3.950         True
+34   large  CPM-blind    NSGA-II      1.572         True
+36   large  CPM-blind    LPT+EDD      2.606         True
+37   large    NSGA-II       ALNS      1.378         True
+38   large    NSGA-II    LPT+EDD      1.033         True
+39   large       ALNS    LPT+EDD      2.411         True
+40  xlarge        CPM  CPM-blind      0.989         True
+41  xlarge        CPM    NSGA-II      2.817         True
+42  xlarge        CPM       ALNS      1.506         True
+43  xlarge        CPM    LPT+EDD      3.828         True
+44  xlarge  CPM-blind    NSGA-II      1.828         True
+46  xlarge  CPM-blind    LPT+EDD      2.839         True
+47  xlarge    NSGA-II       ALNS      1.311         True
+48  xlarge    NSGA-II    LPT+EDD      1.011         True
+49  xlarge       ALNS    LPT+EDD      2.322         True
+
+=== CPM best IGD by regime ===
+               sum  count
+scale  regime            
+large  e<0      30     30
+       e=0      30     30
+       e>0      30     30
+medium e<0      26     30
+       e=0      30     30
+       e>0      27     30
+small  e<0      16     30
+       e=0      23     30
+       e>0      14     30
+verify e<0      66     90
+       e=0      56     90
+       e>0      45     90
+xlarge e<0      29     30
+       e=0      30     30
+       e>0      26     30
+
+=== CPM best IGD+ by regime (Section 7.4, Fig. 4b) ===
+               sum  count
+scale  regime            
+large  e<0      30     30
+       e=0      29     30
+       e>0      30     30
+medium e<0      29     30
+       e=0      29     30
+       e>0      30     30
+small  e<0      21     30
+       e=0      26     30
+       e>0      21     30
+verify e<0      69     90
+       e=0      64     90
+       e>0      46     90
+xlarge e<0      30     30
+       e=0      30     30
+       e>0      28     30
+
+=== 12-30 jobs: CPM best IGD+ by machine count (Section 7.4) ===
+          sum  count      mean
+machines                      
+1           6     30  0.200000
+2          84    120  0.700000
+3          62     90  0.688889
+4          74     90  0.822222
+6          21     30  0.700000
+
+=== 12-30 jobs: winner where CPM is not best on IGD+ ===
+NSGA-II    87
+ALNS       26
+
+=== Table 8 - coverage ===
+                  C(CPM,B)  C(B,CPM)
+scale  method                       
+large  ALNS          0.935     0.024
+       CPM-blind     0.920     0.000
+       LPT+EDD       1.000     0.000
+       NSGA-II       0.933     0.010
+medium ALNS          0.868     0.057
+       CPM-blind     0.997     0.000
+       LPT+EDD       1.000     0.000
+       NSGA-II       0.840     0.054
+small  ALNS          0.721     0.097
+       CPM-blind     0.891     0.000
+       LPT+EDD       0.989     0.000
+       NSGA-II       0.730     0.099
+verify ALNS          0.570     0.054
+       CPM-blind     0.680     0.000
+       LPT+EDD       0.885     0.001
+       NSGA-II       0.568     0.051
+xlarge ALNS          0.925     0.025
+       CPM-blind     0.690     0.000
+       LPT+EDD       1.000     0.000
+       NSGA-II       0.917     0.026
+
+=== Table 9 - ablation ===
+    scale    N  Z1_gain_ratio_of_means  Z1_gain_mean_pct  Z1_gain_median_pct  HVn_gain_mean_pct  HVn_gain_median_pct  wins  ties wilcoxon_p  evals_CPM  evals_blind   cpu_CPM  cpu_blind
+0  verify  270                  4.7327            6.2117              2.7436            24.0914               6.2598   188    82    1.3e-32   199.7815     160.0407    0.1091     0.0868
+1   small   90                  7.6990            9.8529              7.5094            22.8255              13.0122    81     9    5.4e-15  1584.7000    1157.5556    6.1309     4.5068
+2  medium   90                 11.3845           14.6333             12.9893            15.9310              12.9282    90     0    1.7e-16  5484.5444    3320.3556  135.4045    94.1692
+3   large   90                 10.4838           13.7057             12.8061            14.0034              11.6526    83     7    2.5e-15  7120.3444    5247.1000  301.2708   260.6957
+4  xlarge   90                  6.4214           11.9718              9.0220            10.0734               7.5197    63    27    5.2e-12  7570.0222    6505.2333  280.9889   294.4977
+
+=== Cleaning-water reduction (CPM vs each) ===
+        reduction_vs_CPM-blind_pct  reduction_vs_NSGA-II_pct  reduction_vs_ALNS_pct  reduction_vs_LPT+EDD_pct
+verify                         0.0                       3.2                    3.6                      91.2
+small                          0.0                       8.7                   15.0                      91.6
+medium                         0.0                      23.9                   37.3                      96.5
+large                          0.0                      43.1                   32.7                      96.8
+xlarge                         0.0                      58.7                   58.7                      97.6
+
+=== Section 7.7 - CP-SAT distance ===
+{
+  "instances": 135,
+  "replications": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "p1_confirmed": 135,
+  "proven_by_n": {
+    "12": 21,
+    "16": 3
+  },
+  "proven_median_pct": 11.535000843753515,
+  "proven_mean_pct": 22.018592427202204,
+  "proven_exact": 7,
+  "rest_median_pct": 6.227559826490606,
+  "cpm_better_than_cpsat": 3,
+  "median_by_machines": {
+    "1": 39.47,
+    "2": 6.0,
+    "3": 4.12,
+    "4": 7.7
+  },
+  "max_by_machines": {
+    "1": 86.17,
+    "2": 83.09,
+    "3": 23.58,
+    "4": 24.29
+  },
+  "median_by_excess": {
+    "-1": 5.75,
+    "0": 5.66,
+    "1": 15.57
+  },
+  "median_by_tau": {
+    "0.3": 12.08,
+    "0.5": 6.23,
+    "0.7": 4.7
+  },
+  "cpsat_mean_s": 9.067037037037037
+}
+
+=== Wall-clock check ===
+                  clock         HV       IGD     Z1min   Z2min  Z2opt_pct    cpu_s  cpu_max       evals
+scale  method                                                                                          
+large  ALNS       302.0  11714.090    85.795   665.856   0.421     72.222  302.008  302.016  131462.611
+       CPM        302.0  13004.423    11.727   588.094   0.333    100.000  283.680  304.865   13736.167
+       CPM-blind  302.0  11479.040    80.116   680.339   0.333    100.000  206.255  272.033    8098.444
+       LPT+EDD    302.0   2530.669  1095.095   923.378  10.264      0.000    0.000    0.003       3.000
+       NSGA-II    302.0  11453.179    88.825   683.672   0.417     61.111  302.008  302.014  595868.889
+medium ALNS       136.0   3226.795    31.504   281.272   0.236     83.333  136.004  136.014   95428.500
+       CPM        136.0   3500.269    10.313   249.060   0.194    100.000   88.775  136.042    5549.111
+       CPM-blind  136.0   3183.359    34.427   284.890   0.194    100.000   66.883  109.077    3406.611
+       LPT+EDD    136.0    888.435   538.872   383.456   5.796      0.000    0.001    0.004       3.000
+       NSGA-II    136.0   3178.757    35.977   287.326   0.218     83.333  136.008  136.016  389689.389
+small  ALNS         7.0    289.381     9.840   109.618   0.213     88.889    7.004    7.013   37888.611
+       CPM          7.0    296.273    10.981   106.750   0.194    100.000    1.202    5.165    1292.611
+       CPM-blind    7.0    274.690    16.400   113.561   0.194    100.000    0.902    3.540     988.444
+       LPT+EDD      7.0     65.885   169.772   129.205   2.190      0.000    0.000    0.000       3.000
+       NSGA-II      7.0    288.034    10.998   110.376   0.208     94.444    7.006    7.016   59146.278
+xlarge ALNS       281.0  45045.355   158.159  1277.294   0.838     22.222  281.014  281.032   64529.722
+       CPM        281.0  49870.143    16.145  1137.952   0.500    100.000  279.244  281.188   18545.222
+       CPM-blind  281.0  45084.974   121.637  1286.723   0.500    100.000  240.042  253.490   12795.722
+       LPT+EDD    281.0   6668.566  2257.548  1832.950  20.653      0.000    0.001    0.008       3.000
+       NSGA-II    281.0  42842.798   175.090  1345.664   0.856     33.333  281.008  281.014  418246.722
+
+=== Wall-clock Friedman on IGD ===
+    scale   N        p      CD  cpm_best  rank_CPM  rank_CPM-blind  rank_NSGA-II  rank_ALNS  rank_LPT+EDD
+0   small  18  8.5e-10  1.4378        10    1.8889          3.5000        2.4167     2.1944           5.0
+1  medium  18  6.5e-11  1.4378        15    1.2222          3.2778        2.9444     2.5556           5.0
+2   large  18  2.5e-12  1.4378        18    1.0000          3.2778        3.2222     2.5000           5.0
+3  xlarge  18  1.0e-11  1.4378        17    1.1111          2.5000        3.3889     3.0000           5.0
+
+=== Wall-clock diagnostics ===
+{
+  "cpm_equals_blind": {
+    "large": 0,
+    "medium": 0,
+    "small": 2,
+    "xlarge": 0
+  },
+  "overruns": []
+}
