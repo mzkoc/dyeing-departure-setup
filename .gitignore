@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.tmp
+*checkpoint*.json
+results_test/
+figures/
+.ipynb_checkpoints/ 
