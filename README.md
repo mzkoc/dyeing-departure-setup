@@ -1,5 +1,7 @@
 # Departure-dependent setups in parallel batch scheduling
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23182945.svg)](https://doi.org/10.5281/zenodo.23182945)
+
 Code, instance generator and raw results for
 
 > M.Z. Koç, Ç. Sel, M. Dolmacı. *Exploiting departure-dependent setup
@@ -130,7 +132,9 @@ the two checks.
 
 ## Citation
 
-See `CITATION.cff`; the archived release will carry a Zenodo DOI.
+The version used for the paper is archived on Zenodo as release v1.0.0:
+[doi:10.5281/zenodo.23182945](https://doi.org/10.5281/zenodo.23182945).
+See also `CITATION.cff`.
 
 ## Licence
 
