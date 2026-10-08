@@ -4,7 +4,7 @@
 
 Code, instance generator and raw results for
 
-> M.Z. Koç, Ç. Sel, M. Dolmacı. *Exploiting departure-dependent setup
+> M.Z. Koç, Ç. Sel. *Exploiting departure-dependent setup
 > structure in parallel batch scheduling: a bi-objective matheuristic for
 > water-efficient dyeing operations.* Manuscript submitted for publication,
 > 2026.

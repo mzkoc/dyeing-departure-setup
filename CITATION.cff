@@ -10,13 +10,9 @@ authors:
   - family-names: "Koç"
     given-names: "Muhammed Zahid"
     affiliation: "Karabük University"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0000-0002-5774-3978"
   - family-names: "Sel"
     given-names: "Çağrı"
-    affiliation: "Karabük University"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
-  - family-names: "Dolmacı"
-    given-names: "Muammer"
     affiliation: "Karabük University"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
 keywords:
@@ -33,7 +29,5 @@ preferred-citation:
       given-names: "Muhammed Zahid"
     - family-names: "Sel"
       given-names: "Çağrı"
-    - family-names: "Dolmacı"
-      given-names: "Muammer"
   year: 2026
   notes: "Manuscript submitted for publication"
