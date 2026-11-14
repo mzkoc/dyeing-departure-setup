@@ -30,7 +30,7 @@ import time
 from collections import defaultdict
 from typing import Dict, List, Sequence, Tuple
 
-from core import Batch, Instance, Schedule, evaluate_schedule
+from core import Batch, Instance, Schedule, evaluate_schedule, setup_time
 from layer1 import group_jobs, pack_group
 
 
@@ -158,7 +158,8 @@ def greedy_schedule(inst: Instance, batches: Sequence[Batch],
     for b in sorted(batches, key=key):
         best, best_cost = 0, float("inf")
         for m in range(inst.machines):
-            setup = 0.0 if last[m] in (None, b.family) else inst.sigma[last[m]]
+            setup = (0.0 if last[m] is None
+                     else setup_time(inst, last[m], b.family))
             cost = load[m] + setup
             if cost < best_cost:
                 best, best_cost = m, cost
@@ -247,8 +248,9 @@ def _insert(inst: Instance, sched: Schedule, batches: Sequence[Batch],
                 for x in trial:
                     fx = by_id[x].family
                     if prev is not None and prev != fx:
-                        t += inst.sigma[prev]
-                        setup += inst.sigma[prev]
+                        s_ = setup_time(inst, prev, fx)
+                        t += s_
+                        setup += s_
                     t += inst.proc[fx]
                     if how == "greedy":
                         tard += sum(max(0.0, t - d) for d in dues[x])
@@ -428,13 +430,14 @@ def _greedy_decode(inst: Instance, batches: Sequence[Batch],
         b = by_id[idx]
         best, best_score = 0, float("inf")
         for m in range(inst.machines):
-            setup = 0.0 if last[m] in (None, b.family) else inst.sigma[last[m]]
+            setup = (0.0 if last[m] is None
+                     else setup_time(inst, last[m], b.family))
             end = time[m] + setup + inst.proc[b.family]
             score = end + lam * setup
             if score < best_score:
                 best, best_score = m, score
-        setup = (0.0 if last[best] in (None, b.family)
-                 else inst.sigma[last[best]])
+        setup = (0.0 if last[best] is None
+                 else setup_time(inst, last[best], b.family))
         sched[best].append(b.id)
         time[best] += setup + inst.proc[b.family]
         last[best] = b.family

@@ -19,7 +19,7 @@ Model assumptions (see design doc):
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple
 
 Machine = int
 BatchId = int
@@ -49,6 +49,9 @@ class Instance:
     sigma: Dict[str, float]         # setup when LEAVING colour f, hours
     name: str = ""
     meta: dict = field(default_factory=dict)
+    # E2 only (e2.py): a pair-dependent setup matrix {(f, g): hours}. When it
+    # is set, setup_time reads it instead of sigma; None is A3.
+    setup_matrix: Optional[Dict[Tuple[str, str], float]] = None
 
     @property
     def families(self) -> List[str]:
@@ -109,9 +112,12 @@ class Evaluation:
 
 
 def setup_time(inst: Instance, from_family: str, to_family: str) -> float:
-    """Cleaning depends on what is in the vessel, not on what comes next."""
+    """Cleaning depends on what is in the vessel, not on what comes next
+    (A3); for the E2 instances, on both families (inst.setup_matrix)."""
     if from_family == to_family:
         return 0.0
+    if inst.setup_matrix is not None:
+        return inst.setup_matrix[(from_family, to_family)]
     return inst.sigma[from_family]
 
 

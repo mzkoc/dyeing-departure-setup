@@ -1,0 +1,15 @@
+{
+  "ALNS+R": {
+    "dmax": 0.5,
+    "segment": 25,
+    "decay": 0.6,
+    "r_rounds": 5
+  },
+  "NSGA-II+R": {
+    "pop_size": 120,
+    "p_mut": 0.2,
+    "refresh": 5,
+    "r_rounds": 5
+  },
+  "hybrid": "CPM+ALNS+R:union@0.1"
+}

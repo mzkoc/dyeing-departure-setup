@@ -167,12 +167,19 @@ REPLICATIONS = 10
 
 def _due_dates_fisher(rng: random.Random, jobs_meta: List[dict],
                       proc: Dict[str, float], machines: int,
-                      tau: float, R: float = DUE_DATE_RANGE_R) -> List[float]:
+                      tau: float, R: float = DUE_DATE_RANGE_R,
+                      capacity: float = CAPACITY,
+                      clusters=None) -> List[float]:
     """Fisher due dates: d_j = P(1 - tau - R/2) + P*R*U(0,1).
 
     P is the makespan proxy. It is estimated at BATCH level, not job level:
     processing time is per batch (A2), so summing p_f over jobs would
     overstate the horizon badly and make every due date slack.
+
+    `clusters` (sensitivity only, variants.py): a list of positions in the
+    Fisher window and a half-width; each job takes one position at random
+    and is jittered uniformly within the half-width. None gives the Fisher
+    draw above.
     """
     # Estimate batch count per (family, customer) group from total kg.
     groups: Dict[tuple, float] = {}
@@ -182,18 +189,30 @@ def _due_dates_fisher(rng: random.Random, jobs_meta: List[dict],
 
     total_proc = 0.0
     for (f, _), kg in groups.items():
-        n_batches = max(1, math.ceil(kg / CAPACITY))
+        n_batches = max(1, math.ceil(kg / capacity))
         total_proc += n_batches * proc[f]
 
     P = total_proc / machines
     base = P * (1.0 - tau - R / 2.0)
     span = P * R
-    return [max(1.0, round(base + span * rng.random(), 1))
-            for _ in jobs_meta]
+    if clusters is None:
+        return [max(1.0, round(base + span * rng.random(), 1))
+                for _ in jobs_meta]
+    centres, half = clusters
+    out = []
+    for _ in jobs_meta:
+        c = centres[int(rng.random() * len(centres))]
+        u = c + half * (2.0 * rng.random() - 1.0)
+        out.append(max(1.0, round(base + span * u, 1)))
+    return out
 
 
 def generate_instance(cell: Cell, tau: float, replication: int,
-                      seed_base: int = 20260923) -> Instance:
+                      seed_base: int = 20260923, *,
+                      capacity: float = CAPACITY,
+                      size_range=JOB_SIZE_RANGE,
+                      customer_weights=None,
+                      due_clusters=None) -> Instance:
     """Generate one instance. Deterministic in (cell, tau, replication).
 
     The seed uses a stable digest, NOT Python's built-in hash(): string
@@ -201,6 +220,11 @@ def generate_instance(cell: Cell, tau: float, replication: int,
     version silently produced a different instance in every session. Runs that
     looked like they disagreed about an algorithm were in fact solving
     different problems.
+
+    The keyword arguments exist for the sensitivity runs (variants.py); at
+    their defaults the instance is the one of the main study, bit for bit.
+    `customer_weights` draws each job's customer with these weights instead
+    of uniformly; `due_clusters` is passed to _due_dates_fisher.
     """
     tag = f"{cell.label}|{tau}|{replication}|{seed_base}"
     seed = int(hashlib.sha256(tag.encode()).hexdigest()[:8], 16)
@@ -217,10 +241,13 @@ def generate_instance(cell: Cell, tau: float, replication: int,
     prefs = {c: rng.sample(families, k=max(2, len(families) // 2))
              for c in customers}
 
-    lo, hi = JOB_SIZE_RANGE
+    lo, hi = size_range
     meta: List[dict] = []
     for i in range(cell.n):
-        cust = rng.choice(customers)
+        if customer_weights is None:
+            cust = rng.choice(customers)
+        else:
+            cust = rng.choices(customers, weights=customer_weights)[0]
         fam = rng.choice(prefs[cust])
         meta.append({
             "id": i,
@@ -254,7 +281,8 @@ def generate_instance(cell: Cell, tau: float, replication: int,
             if f not in prefs[owner]:
                 prefs[owner].append(f)
 
-    dues = _due_dates_fisher(rng, meta, proc, cell.machines, tau)
+    dues = _due_dates_fisher(rng, meta, proc, cell.machines, tau,
+                             capacity=capacity, clusters=due_clusters)
     jobs = [Job(id=m_["id"], size=m_["size"], family=m_["family"],
                 customer=m_["customer"], due=d)
             for m_, d in zip(meta, dues)]
@@ -262,7 +290,7 @@ def generate_instance(cell: Cell, tau: float, replication: int,
     return Instance(
         jobs=jobs,
         machines=cell.machines,
-        capacity=CAPACITY,
+        capacity=capacity,
         proc=proc,
         sigma=sigma,
         name=f"{cell.label}_t{tau}_r{replication}",

@@ -3,4 +3,5 @@ numpy==2.5.3
 scipy==1.18.1
 pandas==3.0.6
 ortools==9.15.6755
+pyomo==6.9.5        # imported at load time by the companion code in comp7/
 matplotlib
