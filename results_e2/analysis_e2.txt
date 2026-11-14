@@ -1,0 +1,136 @@
+1512 fronts
+feasible: True | H-max guarantee violated: 0 | [7] schedules rejected: 0
+bracket closed (LB = UB) in 972 of 972 records
+wall/clock: median 0.952 max 1.020
+
+== 60 jobs, lambda 1
+    H-max: Z2* attained 91%  HV 1.063  IGD+ 0.013
+    vs H-max+D   IGD+ W/T/L 0/37/17 PS 0.34* (p 0.000746)  dZ1min -0.0%   H-max+D attains Z2* 93%, least Z2 0.23 h (Z2* 0.23)  HV 1.064
+    vs H-mix     IGD+ W/T/L 13/0/41 PS 0.24* (p 0.000746)  dZ1min -0.0%   H-mix attains Z2* 100%, least Z2 0.22 h (Z2* 0.23)  HV 1.073
+    vs ALNS+R    IGD+ W/T/L 15/1/38 PS 0.29* (p 0.0371)  dZ1min -0.0%   ALNS+R attains Z2* 81%, least Z2 0.27 h (Z2* 0.23)  HV 1.066
+    vs [7]+R     IGD+ W/T/L 53/0/1 PS 0.98* (p 6.88e-10)  dZ1min +3.1%*  [7]+R attains Z2* 46%, least Z2 0.63 h (Z2* 0.23)  HV 0.835
+  -- e>0
+    H-max: Z2* attained 72%  HV 1.033  IGD+ 0.023
+    vs H-max+D   IGD+ W/T/L 0/9/9 PS 0.25* (p 0.0154)  dZ1min -0.0%   H-max+D attains Z2* 78%, least Z2 0.68 h (Z2* 0.69)  HV 1.037
+    vs H-mix     IGD+ W/T/L 3/0/15 PS 0.17* (p 0.00387)  dZ1min -0.5%*  H-mix attains Z2* 100%, least Z2 0.67 h (Z2* 0.69)  HV 1.059
+    vs ALNS+R    IGD+ W/T/L 4/0/14 PS 0.22* (p 0.0159)  dZ1min -0.2%   ALNS+R attains Z2* 89%, least Z2 0.69 h (Z2* 0.69)  HV 1.046
+    vs [7]+R     IGD+ W/T/L 17/0/1 PS 0.94* (p 6.1e-05)  dZ1min +4.1%*  [7]+R attains Z2* 0%, least Z2 1.67 h (Z2* 0.69)  HV 0.673
+  -- e=0
+    H-max: Z2* attained 100%  HV 1.042  IGD+ 0.010
+    vs H-max+D   IGD+ W/T/L 0/12/6 PS 0.33  (p 0.0805)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.043
+    vs H-mix     IGD+ W/T/L 4/0/14 PS 0.22  (p 0.0805)  dZ1min -0.0%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.048
+    vs ALNS+R    IGD+ W/T/L 9/0/9 PS 0.50  (p 0.369)  dZ1min -0.0%   ALNS+R attains Z2* 56%, least Z2 0.12 h (Z2* 0.00)  HV 1.039
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +4.2%*  [7]+R attains Z2* 44%, least Z2 0.21 h (Z2* 0.00)  HV 0.893
+  -- e<0
+    H-max: Z2* attained 100%  HV 1.113  IGD+ 0.006
+    vs H-max+D   IGD+ W/T/L 0/16/2 PS 0.44  (p 0.359)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.113
+    vs H-mix     IGD+ W/T/L 6/0/12 PS 0.33  (p 0.442)  dZ1min +0.1%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.112
+    vs ALNS+R    IGD+ W/T/L 2/1/15 PS 0.14* (p 0.0146)  dZ1min -0.0%   ALNS+R attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.114
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +0.7%   [7]+R attains Z2* 94%, least Z2 0.01 h (Z2* 0.00)  HV 0.939
+  [7] before and after R:
+    H-max: Z2* attained 91%  HV 1.109  IGD+ 0.002
+    vs [7]       IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +13.7%*  [7] attains Z2* 46%, least Z2 0.63 h (Z2* 0.23)  HV 0.762
+    vs [7]+R     IGD+ W/T/L 53/0/1 PS 0.98* (p 3.25e-10)  dZ1min +3.1%*  [7]+R attains Z2* 46%, least Z2 0.63 h (Z2* 0.23)  HV 0.910
+  planning value: sigma+ against sigma_mean
+    H-max: Z2* attained 91%  HV 0.978  IGD+ 0.012
+    vs H-max+D   IGD+ W/T/L 0/35/19 PS 0.32* (p 0.000396)  dZ1min -0.0%   H-max+D attains Z2* 93%, least Z2 0.23 h (Z2* 0.23)  HV 0.980
+    vs H-mean    IGD+ W/T/L 17/2/35 PS 0.33* (p 0.0097)  dZ1min -0.0%   H-mean attains Z2* 93%, least Z2 0.23 h (Z2* 0.23)  HV 0.984
+    vs H-mean+D  IGD+ W/T/L 16/2/36 PS 0.31* (p 0.0047)  dZ1min -0.0%   H-mean+D attains Z2* 94%, least Z2 0.23 h (Z2* 0.23)  HV 0.986
+  H-max: planned schedules with true Z1 > planned 0, true Z2 > planned 0; +D points on the front 29, machines whose last family changed 169
+  H-mean: planned schedules with true Z1 > planned 170, true Z2 > planned 162; +D points on the front 29, machines whose last family changed 181
+
+== 150 jobs, lambda 1
+    H-max: Z2* attained 94%  HV 1.121  IGD+ 0.015
+    vs H-max+D   IGD+ W/T/L 0/26/28 PS 0.24* (p 1.14e-05)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.59 h (Z2* 0.59)  HV 1.123
+    vs H-mix     IGD+ W/T/L 24/0/30 PS 0.44  (p 0.82)  dZ1min +0.1%   H-mix attains Z2* 96%, least Z2 0.59 h (Z2* 0.59)  HV 1.122
+    vs ALNS+R    IGD+ W/T/L 36/0/18 PS 0.67* (p 0.0455)  dZ1min +0.0%   ALNS+R attains Z2* 35%, least Z2 0.94 h (Z2* 0.59)  HV 1.098
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 6.5e-10)  dZ1min +4.9%*  [7]+R attains Z2* 0%, least Z2 9.86 h (Z2* 0.59)  HV 0.227
+  -- e>0
+    H-max: Z2* attained 83%  HV 1.102  IGD+ 0.022
+    vs H-max+D   IGD+ W/T/L 0/4/14 PS 0.11* (p 0.00294)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 1.77 h (Z2* 1.78)  HV 1.105
+    vs H-mix     IGD+ W/T/L 7/0/11 PS 0.39  (p 0.393)  dZ1min +0.2%   H-mix attains Z2* 89%, least Z2 1.78 h (Z2* 1.78)  HV 1.100
+    vs ALNS+R    IGD+ W/T/L 16/0/2 PS 0.89* (p 0.0208)  dZ1min +1.5%   ALNS+R attains Z2* 44%, least Z2 2.12 h (Z2* 1.78)  HV 1.047
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +4.6%*  [7]+R attains Z2* 0%, least Z2 13.01 h (Z2* 1.78)  HV 0.143
+  -- e=0
+    H-max: Z2* attained 100%  HV 1.142  IGD+ 0.007
+    vs H-max+D   IGD+ W/T/L 0/10/8 PS 0.28* (p 0.0352)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.142
+    vs H-mix     IGD+ W/T/L 9/0/9 PS 0.50  (p 0.442)  dZ1min -0.1%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.144
+    vs ALNS+R    IGD+ W/T/L 11/0/7 PS 0.61  (p 0.163)  dZ1min -0.2%   ALNS+R attains Z2* 0%, least Z2 0.52 h (Z2* 0.00)  HV 1.123
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +5.6%*  [7]+R attains Z2* 0%, least Z2 9.76 h (Z2* 0.00)  HV 0.215
+  -- e<0
+    H-max: Z2* attained 100%  HV 1.121  IGD+ 0.017
+    vs H-max+D   IGD+ W/T/L 0/12/6 PS 0.33  (p 0.0831)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.122
+    vs H-mix     IGD+ W/T/L 8/0/10 PS 0.44  (p 1)  dZ1min +0.4%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.122
+    vs ALNS+R    IGD+ W/T/L 9/0/9 PS 0.50  (p 1)  dZ1min -0.5%   ALNS+R attains Z2* 61%, least Z2 0.18 h (Z2* 0.00)  HV 1.124
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +4.6%*  [7]+R attains Z2* 0%, least Z2 6.82 h (Z2* 0.00)  HV 0.323
+  [7] before and after R:
+    H-max: Z2* attained 94%  HV 1.130  IGD+ 0.000
+    vs [7]       IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +15.5%*  [7] attains Z2* 0%, least Z2 9.86 h (Z2* 0.59)  HV 0.204
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +4.9%*  [7]+R attains Z2* 0%, least Z2 9.86 h (Z2* 0.59)  HV 0.261
+  planning value: sigma+ against sigma_mean
+    H-max: Z2* attained 94%  HV 1.045  IGD+ 0.020
+    vs H-max+D   IGD+ W/T/L 0/28/26 PS 0.26* (p 2.49e-05)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.59 h (Z2* 0.59)  HV 1.049
+    vs H-mean    IGD+ W/T/L 26/0/28 PS 0.48  (p 1)  dZ1min -0.2%   H-mean attains Z2* 87%, least Z2 0.60 h (Z2* 0.59)  HV 1.056
+    vs H-mean+D  IGD+ W/T/L 26/0/28 PS 0.48  (p 1)  dZ1min -0.2%   H-mean+D attains Z2* 100%, least Z2 0.59 h (Z2* 0.59)  HV 1.058
+  H-max: planned schedules with true Z1 > planned 0, true Z2 > planned 0; +D points on the front 59, machines whose last family changed 227
+  H-mean: planned schedules with true Z1 > planned 225, true Z2 > planned 202; +D points on the front 53, machines whose last family changed 336
+
+== 60 jobs, lambda 2
+    H-max: Z2* attained 93%  HV 1.057  IGD+ 0.012
+    vs H-max+D   IGD+ W/T/L 0/34/20 PS 0.31* (p 0.000266)  dZ1min -0.0%   H-max+D attains Z2* 94%, least Z2 0.23 h (Z2* 0.23)  HV 1.059
+    vs H-mix     IGD+ W/T/L 15/1/38 PS 0.29* (p 0.00235)  dZ1min -0.0%   H-mix attains Z2* 100%, least Z2 0.22 h (Z2* 0.23)  HV 1.059
+    vs ALNS+R    IGD+ W/T/L 21/2/31 PS 0.41  (p 0.291)  dZ1min -0.0%   ALNS+R attains Z2* 83%, least Z2 0.27 h (Z2* 0.23)  HV 1.051
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 6.5e-10)  dZ1min +3.0%*  [7]+R attains Z2* 44%, least Z2 0.65 h (Z2* 0.23)  HV 0.829
+  -- e>0
+    H-max: Z2* attained 78%  HV 1.030  IGD+ 0.020
+    vs H-max+D   IGD+ W/T/L 0/9/9 PS 0.25* (p 0.0231)  dZ1min -0.0%   H-max+D attains Z2* 83%, least Z2 0.69 h (Z2* 0.70)  HV 1.033
+    vs H-mix     IGD+ W/T/L 4/0/14 PS 0.22  (p 0.108)  dZ1min -0.3%   H-mix attains Z2* 100%, least Z2 0.67 h (Z2* 0.70)  HV 1.028
+    vs ALNS+R    IGD+ W/T/L 4/0/14 PS 0.22  (p 0.108)  dZ1min -0.6%   ALNS+R attains Z2* 83%, least Z2 0.70 h (Z2* 0.70)  HV 1.026
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +4.7%*  [7]+R attains Z2* 0%, least Z2 1.66 h (Z2* 0.70)  HV 0.645
+  -- e=0
+    H-max: Z2* attained 100%  HV 1.025  IGD+ 0.011
+    vs H-max+D   IGD+ W/T/L 0/12/6 PS 0.33  (p 0.0554)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.026
+    vs H-mix     IGD+ W/T/L 3/0/15 PS 0.17* (p 0.0168)  dZ1min -0.0%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.031
+    vs ALNS+R    IGD+ W/T/L 9/0/9 PS 0.50  (p 0.468)  dZ1min +0.0%   ALNS+R attains Z2* 67%, least Z2 0.11 h (Z2* 0.00)  HV 1.011
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +2.9%*  [7]+R attains Z2* 33%, least Z2 0.28 h (Z2* 0.00)  HV 0.866
+  -- e<0
+    H-max: Z2* attained 100%  HV 1.118  IGD+ 0.006
+    vs H-max+D   IGD+ W/T/L 0/13/5 PS 0.36  (p 0.129)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.118
+    vs H-mix     IGD+ W/T/L 8/1/9 PS 0.47  (p 1)  dZ1min +0.1%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.117
+    vs ALNS+R    IGD+ W/T/L 8/2/8 PS 0.50  (p 1)  dZ1min -0.0%   ALNS+R attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.114
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +1.6%   [7]+R attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 0.976
+  [7] before and after R:
+    H-max: Z2* attained 93%  HV 1.091  IGD+ 0.002
+    vs [7]       IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +14.2%*  [7] attains Z2* 44%, least Z2 0.65 h (Z2* 0.23)  HV 0.745
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +3.0%*  [7]+R attains Z2* 44%, least Z2 0.65 h (Z2* 0.23)  HV 0.884
+  H-max: planned schedules with true Z1 > planned 0, true Z2 > planned 0; +D points on the front 31, machines whose last family changed 146
+
+== 150 jobs, lambda 2
+    H-max: Z2* attained 98%  HV 1.118  IGD+ 0.018
+    vs H-max+D   IGD+ W/T/L 0/21/33 PS 0.19* (p 1.62e-06)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.59 h (Z2* 0.59)  HV 1.119
+    vs H-mix     IGD+ W/T/L 23/0/31 PS 0.43  (p 0.324)  dZ1min -0.1%   H-mix attains Z2* 98%, least Z2 0.59 h (Z2* 0.59)  HV 1.125
+    vs ALNS+R    IGD+ W/T/L 30/0/24 PS 0.56  (p 0.614)  dZ1min -0.7%*  ALNS+R attains Z2* 31%, least Z2 0.90 h (Z2* 0.59)  HV 1.117
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 6.5e-10)  dZ1min +4.6%*  [7]+R attains Z2* 0%, least Z2 11.30 h (Z2* 0.59)  HV 0.163
+  -- e>0
+    H-max: Z2* attained 94%  HV 1.095  IGD+ 0.028
+    vs H-max+D   IGD+ W/T/L 0/1/17 PS 0.03* (p 0.000879)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 1.77 h (Z2* 1.77)  HV 1.098
+    vs H-mix     IGD+ W/T/L 6/0/12 PS 0.33  (p 0.308)  dZ1min -0.5%   H-mix attains Z2* 94%, least Z2 1.77 h (Z2* 1.77)  HV 1.110
+    vs ALNS+R    IGD+ W/T/L 10/0/8 PS 0.56  (p 0.799)  dZ1min -1.0%   ALNS+R attains Z2* 28%, least Z2 2.10 h (Z2* 1.77)  HV 1.099
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +4.4%*  [7]+R attains Z2* 0%, least Z2 14.21 h (Z2* 1.77)  HV 0.129
+  -- e=0
+    H-max: Z2* attained 100%  HV 1.141  IGD+ 0.009
+    vs H-max+D   IGD+ W/T/L 0/9/9 PS 0.25* (p 0.0231)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.141
+    vs H-mix     IGD+ W/T/L 9/0/9 PS 0.50  (p 0.58)  dZ1min +0.0%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.140
+    vs ALNS+R    IGD+ W/T/L 11/0/7 PS 0.61  (p 0.363)  dZ1min -0.9%*  ALNS+R attains Z2* 6%, least Z2 0.48 h (Z2* 0.00)  HV 1.133
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +5.6%*  [7]+R attains Z2* 0%, least Z2 11.40 h (Z2* 0.00)  HV 0.169
+  -- e<0
+    H-max: Z2* attained 100%  HV 1.117  IGD+ 0.016
+    vs H-max+D   IGD+ W/T/L 0/11/7 PS 0.31  (p 0.0539)  dZ1min -0.0%   H-max+D attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.118
+    vs H-mix     IGD+ W/T/L 8/0/10 PS 0.44  (p 0.608)  dZ1min -0.1%   H-mix attains Z2* 100%, least Z2 0.00 h (Z2* 0.00)  HV 1.125
+    vs ALNS+R    IGD+ W/T/L 9/0/9 PS 0.50  (p 0.799)  dZ1min +0.0%   ALNS+R attains Z2* 61%, least Z2 0.13 h (Z2* 0.00)  HV 1.120
+    vs [7]+R     IGD+ W/T/L 18/0/0 PS 1.00* (p 3.05e-05)  dZ1min +3.7%*  [7]+R attains Z2* 0%, least Z2 8.27 h (Z2* 0.00)  HV 0.190
+  [7] before and after R:
+    H-max: Z2* attained 98%  HV 1.133  IGD+ 0.000
+    vs [7]       IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +14.9%*  [7] attains Z2* 0%, least Z2 11.30 h (Z2* 0.59)  HV 0.136
+    vs [7]+R     IGD+ W/T/L 54/0/0 PS 1.00* (p 3.25e-10)  dZ1min +4.6%*  [7]+R attains Z2* 0%, least Z2 11.30 h (Z2* 0.59)  HV 0.178
+  H-max: planned schedules with true Z1 > planned 0, true Z2 > planned 0; +D points on the front 71, machines whose last family changed 147
