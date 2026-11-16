@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the article below."
 title: "Departure-dependent setups in parallel batch scheduling: code and results"
-version: 1.1.0
-doi: 10.5281/zenodo.24230376
+version: 1.2.0
+doi: 10.5281/zenodo.24282011
 license: MIT
 repository-code: "https://github.com/mzkoc/dyeing-departure-setup"
 authors:

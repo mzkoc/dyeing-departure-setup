@@ -5,6 +5,12 @@ code comments, "[7]" is the companion study (Koç, Sel and Kökçam,
 *Mathematics*, 2026), its reference number in the submitted manuscript; it
 is [8] in the revised one. The current documentation is `README.md`.
 
+v1.2.0 (16 Nov 2026) adds one run made after v1.1.0 was archived: the
+companion method at the budget of its own campaign at 30 and 60 jobs
+(`run_own_budget.sh`, `own_budget.py`, `results_comp7own`), asked for in
+the last internal review before resubmission. No other file changed,
+except `README.md`, `CITATION.cff` and `LICENSE` (copyright holders).
+
 ---
 
 # Revision experiments (JESTCH-D-26-02303, round 1) — package v8.1

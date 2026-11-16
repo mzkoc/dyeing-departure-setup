@@ -11,6 +11,7 @@ Code, instance generator, analysis plan and raw results for
 
 | Release | Content | DOI |
 |---|---|---|
+| v1.2.0 | v1.1.0 and the companion method at the budget of its own campaign (Section 7.3) | [10.5281/zenodo.24282011](https://doi.org/10.5281/zenodo.24282011) |
 | v1.1.0 | the revised manuscript: all experiments of the revision, with the code and results of v1.0.0 | [10.5281/zenodo.24230376](https://doi.org/10.5281/zenodo.24230376) |
 | v1.0.0 | the submitted manuscript | [10.5281/zenodo.23182945](https://doi.org/10.5281/zenodo.23182945) |
 
@@ -74,6 +75,7 @@ how the copy used for the runs relates to that version.
 | `analyze_fair.py`, `confirm.py`, `regime.py`, `e2_analyze.py` | indicators, tests and the decision rules of the analysis plan |
 | `paper_tables.py`, `paper_figures.py` | the tables and Figure 3 of the revised paper |
 | `diagnose_layers.py` | the layer diagnosis (Table 10) |
+| `own_budget.py`, `run_own_budget.sh` | the companion method at the budget of its own campaign (Section 7.3) |
 | `jsonl_io.py` | safe reading of result files (cut-off lines, interrupted runs) |
 | `regress.py`, `golden_v5.json` | regression and guarantee checks; must print `ALL PASS` |
 | `verify_p1.py` | brute-force check of Proposition 1 and Corollary 3 |
@@ -105,6 +107,7 @@ v8.1). Only `results.jsonl` enters the analyses.
 | `results_valid_extra` | SA-EDDTS+R, CPM+R, CPM-blind | 4-9 | 1134 | Sections 7.1, 7.3; Table 8 |
 | `results_comp7` | SA-EDDTS and FFD+EDDTS | 4-9 | 756 | Section 7.3; Tables 8, S9 |
 | `results_comp7x2` | SA-EDDTS at twice the clock, 100 and 150 jobs | 4-9 | 108 | Section 7.3 |
+| `results_comp7own` | SA-EDDTS at the budget of its own campaign: 80 s at 30 jobs, 133.3 s at 60 jobs (added in v1.2.0) | 4-9 | 108 | Section 7.3 |
 | `results_dev` | eight methods, ten seeds | 0-1 | 6678 | Section 7.7 ("Seeds") |
 | `results_budget` | H, ALNS+R, NSGA-II+R, CPM at 0.25, 0.5 and 2 times the clock | 4-6 | 2268 | Section 7.7; Table S5 |
 | `results_sens` | sensitivity variants and perturbed data, cells with e > 0 at 60 and 150 jobs | 4-9 | 1152 | Section 7.7; Table S6 |
@@ -175,6 +178,7 @@ python confirm.py results_valid --cpsatgap results_cpsatgap      # decisions of 
 python analyze_fair.py results_valid --pairs first --methods "$H,ALNS+R,NSGA-II+R,CPM,ALNS,NSGA-II" --tag main
 python regime.py results_valid results_comp7 --methods "$H,FFD+SA-EDDTS,ALNS+R,CPM" --ref "$H"
 python e2_analyze.py results_e2 --by-regime
+python own_budget.py results_valid results_comp7 results_valid_extra results_comp7own   # Section 7.3
 ```
 
 ## Rerunning the experiments
@@ -194,7 +198,14 @@ W=12 F=0.47 bash run_comp7.sh         # the companion method (about 1 h)
 W=12 F=0.47 bash run_v8.sh            # SA-EDDTS+R, ablations, budget robustness (about 3.6 h)
 W=12 F=0.47 bash run_v9a.sh           # reproduction check, sensitivity, scalability, CPM parameters (about 4.7 h)
 W=12 F=0.47 bash run_v9b.sh           # E2 (about 2.2 h)
+W=12 bash run_own_budget.sh          # the companion method at its own budget (about 20 min)
 ```
+
+The companion study's own campaign gave its method 80 s per instance at 30
+jobs and 120 and 160 s at 50 and 80 jobs; `run_own_budget.sh` gives it 80 s
+at 30 jobs and 133.3 s at 60 jobs (linear between 50 and 80 jobs) through
+`--clock-mult` 24.316 and 2.0859, while the other methods keep the equal
+clock of `results_valid`.
 
 The ten-seed development run and the companion method at twice the clock
 (`ANALYSIS_PLAN.md`, sections 6 and 8):
